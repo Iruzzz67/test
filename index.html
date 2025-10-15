@@ -6,9 +6,16 @@
 </head>
 <body>
 
- <video id="berisik" width="690" autoplay muted loop>
+ <video id="berisik" autoplay loop>
     <source src="ssstik.io_@fadlliirawan24_1760253243148.mp4" type"video/mp4">
     Browser kamu tidak mendukung pemutaran video.
  </video>
+  <script>
+  const vid = document.getElementById("berisik");
+  vid.addEventListener("canplay", () => {
+    vid.requestFullscreen(); // Masuk fullscreen otomatis
+    vid.play(); // Putar video
+  });
+  </script>
 </body>
 </html>
